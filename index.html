@@ -3,104 +3,241 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BIOSETAZ | Productores de Melena de León</title>
+<title>BIOSETAZ | Verificación de Autenticidad y Trazabilidad</title>
 
-<!-- ESTRATEGIA DE VISTA PREVIA PREMIUM PARA WHATSAPP Y REDES (META TAGS) -->
-<meta name="description" content="Cultivamos nuestros propios hongos funcionales mediante procesos controlados en Colombia. Adquiere Melena de León pura, trazable y de alta calidad.">
-<meta property="og:title" content="BIOSETAZ | Productores de Melena de León en Colombia">
-<meta property="og:description" content="Asegura tu lote en nuestra gran preventa oficial. 100% natural, sin aditivos ni excipientes. Envíos a todo el país.">
-<meta property="og:image" content="boton.png">
-<meta property="og:type" content="website">
-
-<!-- FAVICON: EL ÍCONO DE LA PESTAÑA DEL NAVEGADOR -->
+<!-- FAVICON -->
 <link rel="icon" type="image/png" href="boton.png">
 
-<!-- Importamos la fuente 'Outfit' desde Google Fonts para todo el sitio -->
+<!-- Fuentes Google Fonts 'Outfit' -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family: 'Outfit', sans-serif;}body{color:#102542;background:#fff;}html{scroll-behavior:smooth;}
-/* HEADER DELGADO CON LOGO CENTRADO E IMPONENTE */header{position:sticky;top:0;z-index:1000;background:white;display:flex;justify-content:space-between;align-items:center;padding:0 6%; height: 90px; box-shadow:0 2px 10px #ddd;}.logo {display: flex;align-items: center;height: 100%; }.logo a {display: flex; align-items: center; height: 100%; text-decoration: none;}.logo img{height: 220px; width: auto;  object-fit: contain;margin-top: -55px; margin-bottom: -55px; padding-top: 5px;}
-/* MENÚ DE NAV REDISEÑADO CON EFECTO DE RED DE MICELIO */nav {display: flex;align-items: center;gap: 5px;}nav a {position: relative;margin: 0 18px;text-decoration: none;color: #102542;font-weight: 600; font-size: 15px;letter-spacing: 0.5px;padding: 8px 0;transition: color 0.3s ease;}nav a:hover {color: #86b72a;}nav a::before {content: '';position: absolute;top: 0;left: 50%;width: 0;height: 2px;background: #86b72a;transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);}nav a::after {content: '';position: absolute;bottom: 0;left: 50%;width: 0;height: 2px;background: #6b9f1c;transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);}nav a:hover::before,nav a:hover::after {width: 100%;left: 0;}
-/* BOTÓN GENERAL DEL HEADER */.btn-nav{background:#6b9f1c;color:white;padding:14px 25px;border-radius:30px;text-decoration:none;font-weight:700;transition: background 0.3s ease, transform 0.2s ease;}.btn-nav:hover {background: #568014;transform: translateY(-2px);}
+/* =========================================
+   ESTILOS BASE UNIFICADOS (DE INDEX.HTML)
+   ========================================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Outfit', sans-serif;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Evita el scroll horizontal molesto */
+}
+body{
+  color:#102542;
+  background:#fafafa;
+}
+html{
+  scroll-behavior:smooth;
+}
 
-/* BOTÓN HAMBURGUESA ESTILO MODERNO */
-.menu-hamburger {display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 10px; z-index: 1100;}.menu-hamburger span {display: block; width: 28px; height: 3px; background-color: #102542; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease;}
-.menu-hamburger.active span:nth-child(1) {transform: translateY(9px) rotate(45deg);}.menu-hamburger.active span:nth-child(2) {opacity: 0;}.menu-hamburger.active span:nth-child(3) {transform: translateY(-9px) rotate(-45deg);}
-
-/* HERO AJUSTADO IDÉNTICO A TU IMAGEN 1 */
-.hero {
-  background: linear-gradient(
-    to left,   
-    rgba(0, 30, 40, 0) 0%,          
-    rgb(0 30 40 / 0%) 50%,          
-    rgb(0 30 40) 75%,               
-    rgb(0 30 40) 100%             
-  ), url("fondo1.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  color: white;
+/* HEADER IDÉNTICO AL PRINCIPAL CON LOGO GRANDE */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 6%; 
+  height: 90px; 
+  box-shadow:0 2px 10px #ddd;
+}
+.logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 80px 8%;
-  height: 100vh;
-  min-height: 650px;
-  max-height: 800px;
-}.hero-text{width:50%;}.hero h1{font-size:55px;line-height:1.2; font-weight: 700;}.hero h1 span{color:#86b72a;display: block; margin-top: 5px;}.hero h2{margin-top:25px;font-size:35px;font-weight: 600;}.hero p{margin:15px 0 30px 0; font-size:18px;line-height:1.6;}
-/* CONTENEDOR DE BOTONES DEL HERO */.hero-buttons {display: flex;align-items: center;gap: 20px;margin-top: 15px;}.btn-buy {background: #84b135; color: white;padding: 18px 30px;border-radius: 15px; text-decoration: none;font-weight: 700;font-size: 15px;letter-spacing: 0.5px;display: inline-flex;align-items: center;gap: 12px;border: none;cursor: pointer;transition: background 0.3s, transform 0.2s;box-shadow: 0 4px 15px rgba(0,0,0,0.2);}.btn-buy:hover {background: #6f962a;transform: translateY(-2px);}.btn-video {background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);color: white;padding: 18px 30px;border-radius: 15px;text-decoration: none;font-weight: 700;font-size: 15px;letter-spacing: 0.5px;display: inline-flex;align-items: center;gap: 12px;border: none;cursor: pointer;transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;box-shadow: 0 6px 20px rgba(220, 39, 67, 0.3);}.btn-video .instagram-icon-svg {width: 20px;height: 20px;fill: currentColor;}.btn-video:hover {transform: translateY(-3px) scale(1.03);box-shadow: 0 10px 25px rgba(220, 39, 67, 0.5);}
-/* SECCIÓN DE CARACTERÍSTICAS SUPERIOR ESTILO BADGES HORIZONTALES */.features{display:flex;justify-content: space-between;align-items: center;gap: 20px;background:#05222c; color:white;padding: 25px 8%;border-bottom: 1px solid rgba(255,255,255,0.05);}.feature{display: flex;align-items: center;gap: 14px; text-align: left;}.feature-icon-wrapper {display: flex;align-items: center;justify-content: center;color: #84b135; flex-shrink: 0;}.feature-text {display: flex;flex-direction: column;justify-content: center;}.feature h3{color: white;font-size: 16px;font-weight: 700;line-height: 1.2;white-space: nowrap;}.flag-colombia {width: 38px;height: 26px;border-radius: 6px;overflow: hidden;display: flex;flex-direction: column;box-shadow: 0 2px 5px rgba(0,0,0,0.3);flex-shrink: 0;}.flag-yellow { background: #FCD116; height: 50%; }.flag-blue { background: #003893; height: 25%; }.flag-red { background: #CE1126; height: 25%; }
-/* POPUP MODAL PREMIUM MEJORADO */.video-modal {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(4, 18, 23, 0.8);backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);display: flex;align-items: center;justify-content: center;z-index: 4000; opacity: 0; pointer-events: none;transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);}.video-modal.active { opacity: 1; pointer-events: auto; }.modal-content {position: relative; width: 92%; max-width: 440px; height: 82vh; background: #000; border-radius: 24px; overflow: hidden;box-shadow: 0 25px 60px -15px rgba(0,0,0,0.7), 0 0 40px rgba(132, 177, 53, 0.15);border: 1px solid rgba(255, 255, 255, 0.1);transform: translateY(40px) scale(0.92); opacity: 0;transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;}.video-modal.active .modal-content { transform: translateY(0) scale(1); opacity: 1; }.modal-close {position: absolute; top: 16px; right: 16px; color: white;font-size: 22px; background: rgba(255, 255, 255, 0.15);backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);border: 1px solid rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 50%;cursor: pointer; z-index: 100; display: flex; align-items: center; justify-content: center;transition: background 0.3s, transform 0.2s, color 0.3s;}.modal-close:hover { background: #84b135; border-color: #84b135; color: black; transform: scale(1.08) rotate(90deg); }.modal-content iframe { width: 100%; height: 100%; border: none; background: #000; }
-/* SECCIÓN DE PRODUCTOS CON REDISEÑO DE PREVENTA */#productos {padding: 70px 6% 40px 6%;background: #fafafa;text-align: center;}.presale-ticker-banner {display: inline-flex; align-items: center; gap: 12px;background: linear-gradient(135deg, #05222c 0%, #102542 100%);color: white; border: 1px solid rgba(132, 177, 53, 0.3);padding: 12px 28px; border-radius: 50px; font-size: 14px;font-weight: 600; letter-spacing: 0.5px; margin-bottom: 20px;box-shadow: 0 4px 15px rgba(0,0,0,0.05);}.presale-ticker-banner span { color: #84b135; font-weight: 700; }.products-subtitle {font-size: 13px;text-transform: uppercase;letter-spacing: 2px;color: #5a6e75;font-weight: 700;margin-bottom: 5px;}.products-main-title {font-size: 38px;color: #0b1e25;font-weight: 700;margin-bottom: 40px;}.products-grid {display: grid;grid-template-columns: repeat(3, 1fr);gap: 25px;align-items: stretch;}
-/* TARJETA DE PRODUCTO MODIFICADA */.product-card {background: white; border: 2px solid #eef2f3; border-radius: 18px;padding: 35px 20px 25px 20px; display: flex; flex-direction: column; align-items: center;position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease;box-shadow: 0 4px 15px rgba(0,0,0,0.02); overflow: hidden;}.product-card.featured-card {border-color: #84b135;box-shadow: 0 12px 35px rgba(132, 177, 53, 0.18);transform: translateY(-5px);}
-/* NUEVA BANDA DIAGONAL PREMIUM DE PREVENTA */.corner-presale-ribbon {position: absolute; top: 18px; left: -38px;background: linear-gradient(135deg, #cf2e2e 0%, #9e1b1b 100%);color: white; font-size: 11px; font-weight: 700; text-transform: uppercase;letter-spacing: 1px; padding: 6px 40px; transform: rotate(-45deg);box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 5; width: 130px; text-align: center;}.product-card.featured-card .corner-presale-ribbon {background: linear-gradient(135deg, #6b9f1c 0%, #4f7812 100%);}
-.top-badge {position: absolute;top: 12px;left: 50%;transform: translateX(-50%);background: #6b9f1c;color: white;font-size: 11px;font-weight: 700;padding: 5px 18px;border-radius: 20px;letter-spacing: 1px;box-shadow: 0 4px 10px rgba(107, 159, 28, 0.3);text-transform: uppercase; z-index: 4;}.product-card h3 {font-size: 20px;color: #0b1e25;font-weight: 700;text-transform: uppercase;margin-bottom: 2px;}.product-card .units-sub {font-size: 22px;color: #0b1e25;font-weight: 700;margin-bottom: 4px; }.product-card .desc-text {font-size: 14px;color: #5a6e75;line-height: 1.4;margin-bottom: 15px; max-width: 220px;min-height: auto; }.image-container {position: relative;width: 100%;display: flex;justify-content: center;align-items: center;margin-bottom: 15px; padding: 0 5px;height: 230px; }.image-container img {max-height: 230px; max-width: 100%;    width: auto;object-fit: contain;transition: transform 0.3s ease;}.product-card:hover .image-container img {transform: scale(1.03);}
-.save-badge {position: absolute;right: -5px; top: 5px;background: #09212a;color: white;width: 68px; height: 68px; border-radius: 50%;display: flex;flex-direction: column;align-items: center;justify-content: center;font-size: 11px;font-weight: 600;line-height: 1.1;box-shadow: 0 6px 15px rgba(0,0,0,0.3);z-index: 2;letter-spacing: 0.3px;text-transform: uppercase;}.save-badge span {font-size: 18px; font-weight: 700;color: #84b135; }.weight-pill {background: #f1f4f5;color: #5a6e75;font-size: 13px;font-weight: 600;padding: 5px 16px;border-radius: 20px;margin-bottom: 12px; }
-.price-box {font-size: 32px;font-weight: 700;color: #0b1e25;margin-bottom: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0px;}.price-container-row { display: flex; align-items: center; gap: 6px; }.price-box span {font-size: 16px;color: #5a6e75;font-weight: 400;}.old-price-strike { font-size: 16px !important; color: #a2b4b8 !important; text-decoration: line-through; font-weight: 500; }
-.shipping-info {display: inline-flex;align-items: center;gap: 8px;font-size: 13px;color: #40535c;margin-bottom: 20px; }.shipping-info strong {color: #0b1e25;font-weight: 700;}.btn-grid-buy {background: #7ca830;color: white;width: 100%;padding: 15px;border-radius: 12px;text-decoration: none;font-weight: 700;font-size: 15px;letter-spacing: 0.5px;display: flex;align-items: center;justify-content: center;gap: 12px;border: none;cursor: pointer;transition: background 0.3s;margin-top: auto; }.btn-grid-buy:hover {background: #648825;}
+  height: 100%; 
+}
+.logo a {
+  display: flex; 
+  align-items: center; 
+  height: 100%; 
+  text-decoration: none;
+}
+.logo img{
+  height: 220px; 
+  width: auto; 
+  object-fit: contain; 
+  margin-top: -55px; 
+  margin-bottom: -55px; 
+  padding-top: 5px;
+  transition: height 0.3s ease;
+}
 
-/* SECCIÓN MÉTODOS DE PAGO DEL MEDIO */
-.payment-mid-banner {background: #ffffff; padding: 25px 6%; border-top: 1px solid #eef2f3; border-bottom: 1px solid #eef2f3; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px;}.payment-mid-banner p {font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; color: #5a6e75; font-weight: 700;}.payment-badges-row {display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;}.payment-badge {background: #f8fafb; border: 1px solid #e2ebed; border-radius: 12px; padding: 8px 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.02); display: inline-flex; align-items: center; justify-content: center;}.payment-badge img {height: 28px; width: auto; object-fit: contain; flex-shrink: 0;}
+/* MENÚ DE NAVEGACIÓN */
+nav {display: flex;align-items: center;gap: 5px;}
+nav a {position: relative;margin: 0 18px;text-decoration: none;color: #102542;font-weight: 600; font-size: 15px;letter-spacing: 0.5px;padding: 8px 0;transition: color 0.3s ease;}
+nav a:hover {color: #86b72a;}
+nav a::before {content: '';position: absolute;top: 0;left: 50%;width: 0;height: 2px;background: #86b72a;transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);}
+nav a::after {content: '';position: absolute;bottom: 0;left: 50%;width: 0;height: 2px;background: #6b9f1c;transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);}
+nav a:hover::before,nav a:hover::after {width: 100%;left: 0;}
 
-/* SECCIÓN: INFOGRAFÍA TÉCNICA */.technical-info-banner {background: #05222c; padding: 60px 4%;display: flex;justify-content: space-between;align-items: stretch;position: relative;}.tech-column {flex: 1;display: flex;flex-direction: column;align-items: center;text-align: center;padding: 10px 20px;position: relative;}.tech-column:not(:last-child)::after {content: '';position: absolute;right: 0;top: 20%;width: 1px;height: 60%;background: rgba(255, 255, 255, 0.15);}.tech-icon {color: #84b135; margin-bottom: 20px;display: flex;align-items: center;justify-content: center;height: 50px;}.technical-info-banner .tech-column h3 {color: white;font-size: 15px;font-weight: 700;text-transform: uppercase;letter-spacing: 0.5px;margin-bottom: 12px;}.tech-column p {color: #b0c0c5;font-size: 14px;line-height: 1.5;font-weight: 400;max-width: 240px;}
-/* SECCIÓN: NUESTRO PROCESO DE CULTIVO */#proceso-cultivo {padding: 80px 6% 60px 6%;background: #fff;text-align: center;}.process-title {font-size: 28px;font-weight: 700;color: #0b1e25;text-transform: uppercase;letter-spacing: 1px;margin-bottom: 40px;position: relative;display: inline-block;}.process-title::after {content: '';position: absolute;bottom: -10px;left: 50%;transform: translateX(-50%);width: 60px;height: 3px;background: #84b135;}.process-steps-grid {display: flex;justify-content: space-between;align-items: flex-start;gap: 15px;position: relative;}.process-step-item {flex: 1;display: flex;flex-direction: column;align-items: center;position: relative;}.step-img-wrapper {position: relative;width: 130px;height: 130px;margin-bottom: 20px;}.step-img-wrapper img {width: 100%;height: 100%;object-fit: cover;border-radius: 50%;border: 2px solid #eef2f3;box-shadow: 0 4px 15px rgba(0,0,0,0.05);}.step-number-badge {position: absolute;top: -5px;left: 50%;transform: translateX(-50%);background: #6b9f1c;color: white;width: 26px;height: 26px;border-radius: 50%;font-weight: 700;font-size: 14px;display: flex;align-items: center;justify-content: center;box-shadow: 0 2px 6px rgba(107, 159, 28, 0.4);}.process-step-item h4 {font-size: 15px;font-weight: 700;color: #102542;line-height: 1.3;max-width: 140px;}.step-arrow-connector {display: flex;align-items: center;justify-content: center;height: 130px;color: #a0b0b5;font-size: 18px;font-weight: 300;}
-/* SECCIÓN GRIDS INFORMATIVOS DE VALOR DE MARCA */.info-blocks-section {padding: 40px 6% 40px 6%; background: #fff;}.info-blocks-grid {display: grid;grid-template-columns: 1.1fr 1.1fr 1fr;gap: 30px;align-items: stretch;}.info-card-box {border: 1px solid #eef2f3;border-radius: 16px;padding: 35px 30px;background: #fff;box-shadow: 0 4px 20px rgba(0,0,0,0.01);display: flex;flex-direction: column;position: relative;overflow: hidden;}.info-card-box .compact-text-side {max-width: 55%;}.info-card-box h3 {font-size: 22px;font-weight: 700;color: #0b1e25;text-transform: uppercase;margin-bottom: 15px;letter-spacing: 0.5px;}.info-card-box .main-p-text {font-size: 15px;color: #40535c;line-height: 1.5;margin-bottom: 20px;}.info-check-list {list-style: none;display: flex;flex-direction: column;gap: 12px;margin-bottom: 20px;}.info-check-list li {display: flex;align-items: center;gap: 10px;font-size: 15px;font-weight: 600;color: #102542;}.info-check-list li::before {content: '✓';color: white;background: #6b9f1c;width: 20px;height: 20px;border-radius: 50%;display: flex;align-items: center;justify-content: center;font-size: 11px;font-weight: 700;flex-shrink: 0;}.card-bottom-illustration {position: absolute;bottom: -10px;right: -10px;max-height: 220px; width: auto;object-fit: contain;pointer-events: none; }.card-center-illustration {position: absolute;bottom: 45px; right: -15px;max-height: 205px; width: auto;object-fit: contain;pointer-events: none;}.info-card-box .small-footer-note {font-size: 13px;color: #5a6e75;font-weight: 600;margin-top: auto; line-height: 1.4;}.info-card-box.dark-consumption-box {background: #05222c;border: none;color: white;}.info-card-box.dark-consumption-box h3 {color: white;margin-bottom: 25px;}.consumption-row {display: flex;align-items: center; gap: 20px;margin-bottom: 22px;}.consumption-row:last-child {margin-bottom: 0;}.consumption-icon-wrapper {color: white; flex-shrink: 0;display: flex;align-items: center;justify-content: center;width: 45px;}.consumption-row p {color: white;font-size: 15px;line-height: 1.4;font-weight: 400;}
+/* BOTÓN DEL HEADER */
+.btn-nav{background:#6b9f1c;color:white;padding:14px 25px;border-radius:30px;text-decoration:none;font-weight:700;transition: background 0.3s ease, transform 0.2s ease;}.btn-nav:hover {background: #568014;transform: translateY(-2px);}
 
-/* SECCIÓN: DISTRIBUIDORES CON CAPTURA DE DATOS INTEGRADA */
-#distribuidores {padding: 90px 6%; background: linear-gradient(135deg, #05222c 0%, #102542 100%); color: white; text-align: center;}.dist-subtitle {font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #84b135; font-weight: 700; margin-bottom: 5px;}.dist-title {font-size: 36px; font-weight: 700; color: #ffffff; margin-bottom: 45px;}.dist-container-layout {display: flex; gap: 40px; align-items: flex-start; text-align: left;}.dist-info-side {flex: 1.2; display: flex; flex-direction: column; gap: 25px;}.dist-benefit-item {display: flex; gap: 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 22px; border-radius: 14px;}.dist-benefit-icon {color: #84b135; flex-shrink: 0;}.dist-benefit-text h4 {font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 5px; color: #ffffff;}.dist-benefit-text p {color: #b0c0c5; font-size: 14px; line-height: 1.5;}.dist-form-side {flex: 1; background: #ffffff; border-radius: 20px; padding: 35px 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); color: #102542;}.dist-form-side h3 {font-size: 22px; font-weight: 700; margin-bottom: 5px; color: #0b1e25;}.dist-form-side p.form-desc {font-size: 14px; color: #5a6e75; margin-bottom: 25px; line-height: 1.4;}.dist-form-group {margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px;}.dist-form-group input {width: 100%; padding: 13px; border: 2px solid #eef2f3; border-radius: 12px; font-size: 15px; outline: none; transition: border-color 0.2s; color: #102542;}.dist-form-group input:focus {border-color: #84b135;}.btn-submit-dist {background: #84b135; color: white; width: 100%; padding: 16px; border-radius: 12px; font-weight: 700; font-size: 15px; letter-spacing: 0.5px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background 0.3s, transform 0.2s; box-shadow: 0 4px 12px rgba(132, 177, 53, 0.2); margin-top: 10px;}.btn-submit-dist:hover {background: #6f962a; transform: translateY(-2px);}
+/* BOTÓN HAMBURGUESA MÓVIL */
+.menu-hamburger {display: none; flex-direction: column; gap: 6px; background: none; border: none; cursor: pointer; padding: 10px; z-index: 1100;}
+.menu-hamburger span {display: block; width: 28px; height: 3px; background-color: #102542; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease;}
+.menu-hamburger.active span:nth-child(1) {transform: translateY(9px) rotate(45deg);}
+.menu-hamburger.active span:nth-child(2) {opacity: 0;}
+.menu-hamburger.active span:nth-child(3) {transform: translateY(-9px) rotate(-45deg);}
 
-/* MEJORA EN PREGUNTAS FRECUENTES */#faq-section {padding: 100px 6% 120px 6%; background: #fafafa;text-align: center;border-top: 1px solid #eef2f3;}.faq-main-title {font-size: 32px;font-weight: 700;color: #0b1e25;text-transform: uppercase;letter-spacing: 1px;margin-bottom: 50px;position: relative;display: inline-block;}.faq-main-title::after {content: '';position: absolute;bottom: -10px;left: 50%;transform: translateX(-50%);width: 60px;height: 3px;background: #84b135;}.faq-grid-3cols {display: grid;grid-template-columns: repeat(3, 1fr);gap: 25px;align-items: start;}.faq-column-stack {display: flex;flex-direction: column;gap: 15px;}.faq-accordion-item {background: white;border: 1px solid #eef2f3;border-radius: 12px;overflow: hidden;box-shadow: 0 4px 10px rgba(0,0,0,0.01);transition: border-color 0.3s;}.faq-accordion-item:hover {border-color: #84b135;}.faq-header-btn {width: 100%;background: white;border: none;padding: 18px 20px;display: flex;justify-content: space-between;align-items: center;text-align: left;cursor: pointer;outline: none;transition: background 0.3s;}.faq-header-btn h4 {font-size: 15px;font-weight: 600;color: #102542;line-height: 1.4;padding-right: 15px;}.faq-icon-status {font-size: 20px;color: #6b9f1c;font-weight: 400;transition: transform 0.3s ease;flex-shrink: 0;}.faq-body-content {max-height: 0;overflow: hidden;transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;background: #fff;padding: 0 20px;text-align: left;border-top: 1px solid transparent;}.faq-body-content p {font-size: 14px;color: #40535c;line-height: 1.5;padding-bottom: 18px;}.faq-accordion-item.active .faq-body-content {max-height: 500px; transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);border-top-color: #f1f4f5;padding-top: 15px;}
-/* CONTENEDOR POPUP: FORMULARIO MODAL */.order-modal {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.6);backdrop-filter: blur(4px);display: flex;align-items: center;justify-content: center;z-index: 3000;opacity: 0;pointer-events: none;transition: opacity 0.3s ease;}.order-modal.active {opacity: 1;pointer-events: auto;}.order-modal-content {background: white;width: 95%;max-width: 460px;border-radius: 20px;padding: 30px;box-shadow: 0 15px 40px rgba(0,0,0,0.2);position: relative;display: flex;flex-direction: column;}.order-modal-close {position: absolute;top: 20px;right: 20px;background: #f1f4f5;border: none;width: 32px;height: 32px;border-radius: 50%;font-size: 18px;font-weight: bold;color: #5a6e75;cursor: pointer;display: flex;align-items: center;justify-content: center;}.order-modal-content h3 {font-size: 24px;color: #0b1e25;margin-bottom: 5px;font-weight: 700;}.order-modal-content .selected-product-label {background: #eef7eb;color: #6b9f1c;font-weight: 700;font-size: 14px;padding: 8px 15px;border-radius: 10px;margin-bottom: 20px;display: inline-block;align-self: flex-start;}.form-group {margin-bottom: 14px;display: flex;flex-direction: column;gap: 6px;text-align: left;}.form-group label {font-size: 14px;font-weight: 700;color: #102542;}.form-group input {width: 100%;padding: 13px;border: 2px solid #eef2f3;border-radius: 12px;font-size: 15px;font-family: inherit;color: #102542;outline: none;transition: border-color 0.2s;}.form-group input:focus {border-color: #84b135;}.modal-actions-wrapper {display: flex;flex-direction: column;gap: 12px;margin-top: 15px;}.btn-direct-checkout {background: #0f2b35; color: white;border: 2px solid #84b135;border-radius: 12px;padding: 15px;font-size: 15px;font-weight: 700;cursor: pointer;display: flex;align-items: center;justify-content: center;gap: 10px;transition: background 0.3s, transform 0.2s;box-shadow: 0 4px 15px rgba(15, 43, 53, 0.2);text-decoration: none;text-align: center;}.btn-direct-checkout:hover {background: #194454;transform: translateY(-2px);}.btn-submit-order {background: #25d366; color: white;border: none;border-radius: 12px;padding: 15px;font-size: 15px;font-weight: 700;cursor: pointer;display: flex; align-items: center; justify-content: center; gap: 10px; transition: background 0.3s, transform 0.2s; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);}.btn-submit-order:hover {background: #20ba5a;transform: translateY(-2px);}
+/* =========================================
+   REGLAS PARA ADAPTAR TEXTOS EN MOBILE (¡La clave!)
+   ========================================= */
+h1 {
+  font-size: clamp(1.8rem, 5vw, 3.5rem); /* Se adapta mágicamente al tamaño de pantalla */
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.3;
+}
 
-/* MENÚ FLOTANTE MULTI-REDES SOCIALES CON EL NUEVO LOGO DEL LEÓN BRILLANTE */
-.mushroom-social-menu {position: fixed;right: 25px;bottom: 25px;display: flex;flex-direction: column-reverse; align-items: center;gap: 14px;z-index: 2500;}.mushroom-trigger {background: #000000;width: 68px;height: 65px;border-radius: 50%;display: flex;align-items: center;justify-content: center;cursor: pointer;transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);z-index: 10;border: 2px solid #84b135;padding: 0; overflow: hidden; animation: pulseRing 2s infinite ease-in-out;}.mushroom-trigger img {width: 100%; height: 100%; object-fit: cover; transform: scale(1.15);}.sub-social-btn {width: 50px;height: 50px;border-radius: 50%;display: flex;align-items: center;justify-content: center;color: white;text-decoration: none;opacity: 0;transform: translateY(20px) scale(0.6); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;pointer-events: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15);}.sub-social-btn svg {width: 22px;height: 22px;fill: currentColor;}.sub-social-btn.wa-btn { background: #25d366; }.sub-social-btn.ig-btn { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }.sub-social-btn.tt-btn { background: #000000; border: 1px solid rgba(255,255,255,0.15); }.mushroom-social-menu:hover .mushroom-trigger {transform: scale(1.08) rotate(5deg);}.mushroom-social-menu:hover .sub-social-btn {opacity: 1;transform: translateY(0) scale(1);pointer-events: auto; }.mushroom-social-menu:hover .wa-btn { transition-delay: 0.05s; }.mushroom-social-menu:hover .ig-btn { transition-delay: 0.12s; }.mushroom-social-menu:hover .tt-btn { transition-delay: 0.19s; }
+/* =========================================
+   ESTILOS MENÚ FLOTANTE (DE INDEX.HTML)
+   ========================================= */
+.mushroom-social-menu {position: fixed;right: 25px;bottom: 25px;display: flex;flex-direction: column-reverse; align-items: center;gap: 14px;z-index: 2500;}
+.mushroom-trigger {background: #000000;width: 68px;height: 65px;border-radius: 50%;display: flex;align-items: center;justify-content: center;cursor: pointer;transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);z-index: 10;border: 2px solid #84b135;padding: 0; overflow: hidden; animation: pulseRing 2s infinite ease-in-out;}
+.mushroom-trigger img {width: 100%; height: 100%; object-fit: cover; transform: scale(1.15);}
+.sub-social-btn {width: 50px;height: 50px;border-radius: 50%;display: flex;align-items: center;justify-content: center;color: white;text-decoration: none;opacity: 0;transform: translateY(20px) scale(0.6); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;pointer-events: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
+.sub-social-btn svg {width: 22px;height: 22px;fill: currentColor;}
+.sub-social-btn.wa-btn { background: #25d366; }
+.sub-social-btn.ig-btn { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.sub-social-btn.tt-btn { background: #000000; border: 1px solid rgba(255,255,255,0.15); }
+.mushroom-social-menu:hover .mushroom-trigger {transform: scale(1.08) rotate(5deg);}
+.mushroom-social-menu:hover .sub-social-btn {opacity: 1;transform: translateY(0) scale(1);pointer-events: auto; }
+.mushroom-social-menu:hover .wa-btn { transition-delay: 0.05s; }
+.mushroom-social-menu:hover .ig-btn { transition-delay: 0.12s; }
+.mushroom-social-menu:hover .tt-btn { transition-delay: 0.19s; }
 
-/* ANIMACIÓN KEYFRAME PARA EL ARO DE LUZ PRENDE/APAGA */
 @keyframes pulseRing {
   0% { box-shadow: 0 0 0 0 rgba(132, 177, 53, 0.7), 0 0 10px rgba(132, 177, 53, 0.5); }
   50% { box-shadow: 0 0 0 12px rgba(132, 177, 53, 0.2), 0 0 20px rgba(132, 177, 53, 0.8); border-color: #a3d944; }
   100% { box-shadow: 0 0 0 0 rgba(132, 177, 53, 0), 0 0 5px rgba(132, 177, 53, 0); }
 }
 
-/* REDISEÑO CORPORATIVO DEL FOOTER CON LOGOS SOLOS */
-.premium-footer {background: #061622; color: #ffffff;padding: 80px 8% 0 8%;border-top: 3px solid #84b135;position: relative;}.footer-container {display: grid;grid-template-columns: 1.5fr 1fr 1fr;gap: 60px;padding-bottom: 40px;}.footer-brand-block {display: flex;flex-direction: column;gap: 20px;}.footer-brand-block h2 {font-size: 28px;font-weight: 700;letter-spacing: 1.5px;color: #ffffff;text-transform: uppercase;}.footer-brand-block p {color: #a2b4b8;font-size: 15px;line-height: 1.6;max-width: 360px;}.footer-brand-block .specialty-label {color: #84b135;font-weight: 700;}.mintic-badge-card {background: rgba(255, 255, 255, 0.03);border: 1px solid rgba(132, 177, 53, 0.25);padding: 14px 18px;border-radius: 12px;font-size: 13px;color: #e2ebed;line-height: 1.4;max-width: 360px;box-shadow: 0 4px 15px rgba(0,0,0,0.1);}.mintic-badge-card span {color: #84b135;font-weight: 700;}.footer-links-column {display: flex;flex-direction: column;gap: 25px;}.footer-links-column h3 {font-size: 15px;font-weight: 700;text-transform: uppercase;color: #ffffff;letter-spacing: 1.2px;position: relative;padding-bottom: 8px;}.footer-links-column h3::after {content: '';position: absolute;bottom: 0;left: 0;width: 35px;height: 2px;background: #84b135;}.footer-links-column ul {list-style: none;display: flex;flex-direction: column;gap: 14px;}.footer-links-column ul a {color: #a2b4b8;text-decoration: none;font-size: 15px;font-weight: 400;transition: color 0.25s ease, padding-left 0.25s ease;display: inline-block;}.footer-links-column ul a:hover {color: #84b135;padding-left: 4px;}
-.footer-payment-row {border-top: 1px solid rgba(255, 255, 255, 0.06); padding: 25px 0 10px 0; display: flex; flex-direction: column; align-items: center; gap: 12px;}.footer-payment-row span {font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #697c82; font-weight: 600;}.footer-payment-badges {display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;}.footer-payment-badge {background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 6px 16px; display: inline-flex; align-items: center; justify-content: center;}.footer-payment-badge img {height: 22px; width: auto; object-fit: contain; flex-shrink: 0;}
-.footer-bottom-bar {border-top: 1px solid rgba(255, 255, 255, 0.06);padding: 30px 0;display: flex;justify-content: space-between;align-items: center;color: #697c82;font-size: 13px;letter-spacing: 0.3px;}.footer-bottom-bar strong {color: #a2b4b8;font-weight: 600;}
+/* =========================================
+   ESTILOS FOOTER CORPORATIVO (DE INDEX.HTML)
+   ========================================= */
+.premium-footer {background: #061622; color: #ffffff;padding: 80px 8% 0 8%;border-top: 3px solid #84b135;position: relative;}
+.footer-container {display: grid;grid-template-columns: 1.5fr 1fr 1fr;gap: 60px;padding-bottom: 40px;}
+.footer-brand-block {display: flex;flex-direction: column;gap: 20px;}
+.footer-brand-block h2 {font-size: 28px;font-weight: 700;letter-spacing: 1.5px;color: #ffffff;text-transform: uppercase;}
+.footer-brand-block p {color: #a2b4b8;font-size: 15px;line-height: 1.6;max-width: 360px;}
+.footer-brand-block .specialty-label {color: #84b135;font-weight: 700;}
+.mintic-badge-card {background: rgba(255, 255, 255, 0.03);border: 1px solid rgba(132, 177, 53, 0.25);padding: 14px 18px;border-radius: 12px;font-size: 13px;color: #e2ebed;line-height: 1.4;max-width: 360px;box-shadow: 0 4px 15px rgba(0,0,0,0.1);}
+.mintic-badge-card span {color: #84b135;font-weight: 700;}
+.footer-links-column {display: flex;flex-direction: column;gap: 25px;}
+.footer-links-column h3 {font-size: 15px;font-weight: 700;text-transform: uppercase;color: #ffffff;letter-spacing: 1.2px;position: relative;padding-bottom: 8px;}
+.footer-links-column h3::after {content: '';position: absolute;bottom: 0;left: 0;width: 35px;height: 2px;background: #84b135;}
+.footer-links-column ul {list-style: none;display: flex;flex-direction: column;gap: 14px;}
+.footer-links-column ul a {color: #a2b4b8;text-decoration: none;font-size: 15px;font-weight: 400;transition: color 0.25s ease, padding-left 0.25s ease;display: inline-block;}
+.footer-links-column ul a:hover {color: #84b135;padding-left: 4px;}
+.footer-payment-row {border-top: 1px solid rgba(255, 255, 255, 0.06); padding: 25px 0 10px 0; display: flex; flex-direction: column; align-items: center; gap: 12px;}
+.footer-payment-row span {font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #697c82; font-weight: 600;}
+.footer-payment-badges {display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;}
+.footer-payment-badge {background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 6px 16px; display: inline-flex; align-items: center; justify-content: center;}
+.footer-payment-badge img {height: 22px; width: auto; object-fit: contain; flex-shrink: 0;}
+.footer-bottom-bar {border-top: 1px solid rgba(255, 255, 255, 0.06);padding: 30px 0;display: flex;justify-content: space-between;align-items: center;color: #697c82;font-size: 13px;letter-spacing: 0.3px;}
+.footer-bottom-bar strong {color: #a2b4b8;font-weight: 600;}
 
-/* RESPONSIVE */
-@media(max-width:1100px) {.info-blocks-grid, .footer-container {grid-template-columns: 1fr;gap: 40px;}.premium-footer {text-align: center;padding-top: 60px;}.footer-links-column h3::after {left: 50%;transform: translateX(-50%);}.mintic-badge-card {margin: 0 auto;}.footer-bottom-bar {flex-direction: column;gap: 15px;padding: 25px 0;}.faq-grid-3cols {grid-template-columns: 1fr;gap: 15px;}.info-card-box .compact-text-side {max-width: 100%; }.card-bottom-illustration, .card-center-illustration {position: relative;bottom: 0;right: 0;margin-top: 20px;align-self: center;max-height: 180px;}.process-steps-grid {flex-wrap: wrap;justify-content: center;gap: 30px;}.step-arrow-connector {display: none !important;}.process-step-item {width: 30%;} .dist-container-layout {flex-direction: column; gap: 40px;} .dist-form-side {width: 100%;}}
-@media(max-width:1050px) {.technical-info-banner {flex-direction: column;gap: 40px;padding: 50px 10%;}.tech-column::after {display: none !important;}.tech-column {border-bottom: 1px solid rgba(255, 255, 255, 0.1);padding-bottom: 30px;}.tech-column:last-child {border-bottom: none;padding-bottom: 0;}}
-@media(max-width:950px) {.products-grid {grid-template-columns: 1fr;gap: 40px;}.product-card.featured-card {transform: none;}}
+/* =========================================
+   ESTILOS ESPECÍFICOS DE TRAZABILIDAD
+   ========================================= */
+.trace-container {max-width: 1100px; margin: 40px auto; padding: 0 20px; display: flex; flex-direction: column; gap: 30px;}
+.top-verify-block {display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 25px; align-items: stretch;}
+.product-hero-card {background: white; border: 1px solid #eef2f3; border-radius: 20px; padding: 30px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.product-hero-card img {max-height: 380px; width: auto; object-fit: contain; margin-bottom: 20px;}
+.info-side-pane {display: flex; flex-direction: column; gap: 20px;}
+.auth-status-box {background: white; border: 1px solid #eef2f3; border-radius: 20px; padding: 25px; display: grid; grid-template-columns: 1.8fr 1.2fr; gap: 20px; align-items: center;}
+.status-badge-flex {display: flex; align-items: center; gap: 15px;}
+.status-badge-flex .icon-check {background: #eef7eb; color: #6b9f1c; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px;}
+.status-badge-flex h2 {font-size: 20px; font-weight: 700; color: #0b1e25; text-transform: uppercase;}
+.status-badge-flex p {font-size: 15px; color: #6b9f1c; font-weight: 600; margin-top: 2px;}
+.qr-container-box {text-align: center; border-left: 1px solid #eef2f3; padding-left: 20px;}
+.qr-container-box img {width: 100px; height: 100px; object-fit: contain;}
+.qr-container-box p {font-size: 12px; color: #5a6e75; margin-top: 8px; line-height: 1.3;}
+.specs-panel-box {background: white; border: 1px solid #eef2f3; border-radius: 20px; padding: 25px; display: flex; flex-direction: column; gap: 15px;}
+.specs-panel-box h3 {font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #5a6e75; font-weight: 700; border-bottom: 2px solid #f1f4f5; padding-bottom: 8px;}
+.spec-row-item {display: flex; align-items: center; gap: 15px; padding: 5px 0;}
+.spec-icon-circle {color: #6b9f1c; background: #fafafa; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
+.spec-data-text p.label-title {font-size: 13px; color: #5a6e75; font-weight: 500;}
+.spec-data-text p.value-desc {font-size: 15px; color: #102542; font-weight: 700;}
+.section-card-panel {background: white; border: 1px solid #eef2f3; border-radius: 20px; padding: 30px;}
+.section-title-wrapper {display: flex; align-items: center; gap: 12px; margin-bottom: 25px; border-bottom: 2px solid #f1f4f5; padding-bottom: 12px;}
+.section-title-wrapper svg {color: #6b9f1c;}
+.section-title-wrapper h3 {font-size: 16px; text-transform: uppercase; letter-spacing: 1px; color: #0b1e25; font-weight: 700;}
+.trace-data-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+.trace-grid-cell {background: #f8fafb; border: 1px solid #e2ebed; border-radius: 12px; padding: 15px 20px; display: flex; align-items: center; gap: 15px;}
+.trace-cell-icon {color: #6b9f1c;}
+.trace-cell-text p.cell-lbl {font-size: 12px; color: #5a6e75; font-weight: 500; margin-bottom: 2px;}
+.trace-cell-text p.cell-val {font-size: 14px; color: #102542; font-weight: 700;}
+.status-pill-ok {background: #eef7eb; color: #6b9f1c; font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 20px; display: inline-block;}
 
-/* REDISEÑO DEL HEADER PARA CELULARES */
+/* CONTENEDOR DEL BANNER DE LA ETIQUETA */
+.label-banner-scrollbox {width: 100%; overflow-x: auto; background: white; border: 1px solid #eef2f3; border-radius: 20px; padding: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); display: flex; justify-content: center;}
+.label-banner-scrollbox img {width: 100%; min-width: 800px; height: auto; object-fit: contain; border-radius: 12px;}
+
+.triple-dashboard-row {display: grid; grid-template-columns: 1fr 1.1fr 1fr; gap: 25px;}
+.dashboard-block-card {background: white; border: 1px solid #eef2f3; border-radius: 20px; padding: 25px; display: flex; flex-direction: column;}
+.dashboard-block-card h4 {font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #0b1e25; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #f1f4f5; padding-bottom: 10px;}
+.dashboard-block-card h4 svg {color: #6b9f1c;}
+.raw-material-desc {font-size: 14px; color: #40535c; line-height: 1.6; font-weight: 500;}
+.raw-material-illustration {width: 100%; max-height: 140px; object-fit: contain; margin-top: auto; padding-top: 15px;}
+.process-vertical-timeline {display: flex; flex-direction: column; gap: 0; padding-left: 5px;}
+.timeline-step-node {display: flex; align-items: stretch; gap: 15px;}
+.node-line-indicator {display: flex; flex-direction: column; align-items: center;}
+.node-dot {width: 22px; height: 22px; background: #6b9f1c; color: white; font-size: 11px; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 2;}
+.node-line {width: 2px; flex-grow: 1; background: #e2ebed; min-height: 20px;}
+.timeline-step-node:last-child .node-line {display: none;}
+.node-content-text {padding-bottom: 14px; font-size: 14px; font-weight: 600; color: #102542; display: flex; align-items: center;}
+.analysis-check-list {list-style: none; display: flex; flex-direction: column; gap: 14px;}
+.analysis-check-list li {display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #102542;}
+.analysis-check-list li::before {content: '✓'; color: white; background: #6b9f1c; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0;}
+.docs-download-grid {display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;}
+.doc-action-btn {background: white; border: 1px solid #eef2f3; border-radius: 16px; padding: 20px; text-align: center; text-decoration: none; color: #102542; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; transition: border-color 0.3s, box-shadow 0.3s;}
+.doc-action-btn:hover {border-color: #84b135; box-shadow: 0 4px 15px rgba(132, 177, 53, 0.08);}
+.doc-action-btn p {font-size: 13px; font-weight: 600; line-height: 1.4; color: #0b1e25;}
+.doc-btn-icon {color: #5a6e75; transition: color 0.3s;}
+.doc-action-btn:hover .doc-btn-icon {color: #6b9f1c;}
+.benefits-compact-row {display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;}
+.benefit-compact-card {background: white; border: 1px solid #eef2f3; border-radius: 16px; padding: 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px;}
+.benefit-compact-card h5 {font-size: 14px; font-weight: 700; color: #0b1e25; text-transform: uppercase;}
+.benefit-compact-card p {font-size: 13px; color: #5a6e75; line-height: 1.4; font-weight: 400;}
+.benefit-compact-icon {color: #6b9f1c; margin-bottom: 5px;}
+
+/* =========================================
+   RESPONSIVE OPTIMIZADO
+   ========================================= */
+@media(max-width:1100px) {
+  .trace-container {padding: 0 5%;}
+  .trace-data-grid {grid-template-columns: repeat(2, 1fr);}
+  .docs-download-grid {grid-template-columns: repeat(2, 1fr);}
+  .benefits-compact-row {grid-template-columns: repeat(2, 1fr);}
+  .footer-container {grid-template-columns: 1fr; gap: 40px; text-align: center;}
+  .footer-links-column h3::after {left: 50%; transform: translateX(-50%);}
+  .mintic-badge-card {margin: 0 auto;}
+  .footer-bottom-bar {flex-direction: column; gap: 15px; padding: 25px 0;}
+}
+
+@media(max-width:980px) {
+  .top-verify-block {grid-template-columns: 1fr;}
+  .triple-dashboard-row {grid-template-columns: 1fr; gap: 20px;}
+  .label-banner-scrollbox {justify-content: flex-start;}
+}
+
 @media(max-width:900px){
-  header {height: 80px; flex-direction: row; justify-content: space-between; padding: 0 5%; gap: 0;}
-  .logo img {height: 190px; margin-top: -45px; margin-bottom: -45px; padding-top: 0;}
+  header {height: 80px; padding: 0 5%;}
+  .logo img {height: 150px; margin-top: -35px; margin-bottom: -35px;} /* Reducción de tamaño del logo para evitar desborde en móvil */
   .btn-nav {display: none;}
   .menu-hamburger {display: flex;}
-  
   nav {
     position: absolute; top: 80px; left: 0; width: 100%; height: 0; 
     background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);
@@ -109,144 +246,251 @@
     transition: height 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   }
-  nav.active {height: 320px; opacity: 1; pointer-events: auto;}
+  nav.active {height: 280px; opacity: 1; pointer-events: auto;}
   nav a {margin: 0; font-size: 18px; text-align: center; padding: 10px 0; width: 100%;}
-  
-  .hero{flex-direction:column; background:linear-gradient(rgba(0,30,40,0.75), rgba(0,30,40,0.75)),url("fondo1.png"); background-size: cover; background-position: center; height: auto; max-height: none;}
-  .hero-text{width:100%; text-align:center;}
-  .hero-buttons {flex-direction: column; width: 100%;}
-  .btn-buy, .btn-video {width: 100%; justify-content: center;}
-  .features {display: none;}
-  .process-step-item {width: 45%;}
+}
+
+@media(max-width:640px) {
+  .auth-status-box {grid-template-columns: 1fr; text-align: center;}
+  .status-badge-flex {flex-direction: column; gap: 10px;}
+  .qr-container-box {border-left: none; border-top: 1px solid #eef2f3; padding-left: 0; padding-top: 20px;}
+  .trace-data-grid {grid-template-columns: 1fr;}
+  .docs-download-grid {grid-template-columns: 1fr;}
+  .benefits-compact-row {grid-template-columns: 1fr;}
 }
 </style>
 </head>
 <body>
+
+<!-- HEADER UNIFICADO (ENLACES CORREGIDOS) -->
 <header>
-  <div class="logo"><a href="#inicio"><img src="logoBiosetaz.png" alt="Logo BIOSETAZ"></a></div>
+  <div class="logo"><a href="index.html#inicio"><img src="logoBiosetaz.png" alt="Logo BIOSETAZ"></a></div>
   <button class="menu-hamburger" id="hamburgerBtn" title="Abrir menú">
     <span></span>
     <span></span>
     <span></span>
   </button>
   <nav id="navMenu">
-    <a href="#inicio">Inicio</a>
-    <a href="#productos">Productos</a>
-    <a href="#proceso-cultivo">Nuestro proceso</a>
-    <a href="#distribuidores">Distribuidores</a>
-    <a href="#faq-section">Preguntas frecuentes</a>
+    <a href="index.html#inicio">Inicio</a>
+    <a href="index.html#productos">Productos</a>
+    <a href="index.html#proceso-cultivo">Nuestro proceso</a>
+    <a href="index.html#distribuidores">Distribuidores</a>
   </nav>
-  <a class="btn-nav" href="#productos">Comprar ahora</a>
+  <a class="btn-nav" href="index.html#productos">Volver a la tienda</a>
 </header>
 
-<section class="hero" id="inicio"><div class="hero-text"><h1>PRODUCTORES DE<span>HONGOS FUNCIONALES</span></h1><h2>Melena de León</h2><p>Hericium erinaceus</p><p>Cultivamos nuestros propios hongos funcionales mediante procesos controlados para ofrecer productos naturales, trazables y de alta calidad.</p><div class="hero-buttons">    <a class="btn-buy" href="#productos">    COMPRAR AHORA     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>  </a>  <button class="btn-video" id="openVideoBtn">    <svg class="instagram-icon-svg" viewBox="0 0 24 24">      <path d="M12 2.163c3.204 0 3.584.012 4.85 Santo .07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-.485.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.79.073 7.151.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>    </svg>    VER VIDEOS EN INSTAGRAM  </button></div></div></section>
-<!-- SECCIÓN DE CARACTERÍSTICAS SUPERIOR CON ÍCONOS MEJORADOS --><div class="features">  <div class="feature">    <div class="feature-icon-wrapper">      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">        <path d="M12 6c-2.5 0-3.5 2-3.5 3.5 0 .6.3 1 1 1.2.8.3 1.2.7 1.2 1.5v4.3a1 1 0 0 0 2 0v-4.3c0-.8.4-1.2 1.2-1.5.7-.2 1-.6 1-1.2 0-1.5-1-3.5-3.5-3.5z"/>        <path d="M6 10c-1.8 0-2.5 1.5-2.5 2.5 0 .4.2.7.7.8.5.2.8.5.8 1v3.2a.8.8 0 0 0 1.6 0v-3.2c0-.5.3-.8.8-1 .5-.1.7-.4.7-.8 0-1-.7-2.5-2.5-2.5z"/>        <path d="M18 8c-2 0-2.8 1.7-2.8 2.8 0 .5.2.8.8 1 .6.2 1 .6 1 1.2v3.5a.9.9 0 0 0 1.8 0v-3.5c0-.6.4-1 1-1.2.6-.2.8-.5.8-1 0-1.1-.8-2.8-2.6-2.8z"/>        <path d="M2 21h20"/>      </svg>    </div>    <div class="feature-text">      <h3>Cultivo propio</h3>    </div>  </div>
-  <div class="feature">    <div class="feature-icon-wrapper">      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">        <circle cx="12" cy="13" r="5" fill="none"/>        <circle cx="12" cy="13" r="2" fill="currentColor"/>        <path d="M12 3v3M12 17v4M3 13h3M17 13h4M5.6 6.6l2.1 2.1M16.3 17.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/>      </svg>    </div>    <div class="feature-text">      <h3>100% Natural</h3>    </div>  </div>
-  <div class="feature">    <div class="flag-colombia">      <div class="flag-yellow"></div>      <div class="flag-blue"></div>      <div class="flag-red"></div>    </div>    <div class="feature-text">      <h3>Hecho en Colombia</h3>    </div>  </div>
-  <div class="feature">    <div class="feature-icon-wrapper">      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">        <path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3z"/>        <path d="M15 15h2v2h-2zm4 4h2v2h-2zm0-4h2v2h-2zm-4 4h2v2h-2z"/>      </svg>    </div>    <div class="feature-text">      <h3>Trazabilidad por lote</h3>    </div>  </div>
-  <div class="feature">    <div class="feature-icon-wrapper">      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">        <path d="M6 3h12"/>        <path d="M9 3v6l-4.2 7.5A2 2 0 0 0 6.5 19h11a2 2 0 0 0 1.7-2.5L15 9V3"/>        <line x1="3" y1="21" x2="21" y2="3" stroke="#84b135" stroke-width="2"/>      </svg>    </div>    <div class="feature-text">      <h3>Sin aditivos ni excipientes</h3>    </div>  </div></div>
-<!-- VENTANA POPUP: INTEGRACIÓN DEL EMBDED REAL DE INSTAGRAM --><div class="video-modal" id="videoModal">  <div class="modal-content">    <button class="modal-close" id="closeVideoBtn" title="Cerrar ventana">&times;</button>    <iframe id="videoPlayer" src="https://www.instagram.com/dr.biosetaz/embed" allowtransparency="true" frameborder="0" scrolling="yes"></iframe>  </div></div>
-<!-- SECCIÓN DE PRODUCTOS CON BANDA EN LA ESQUINA --><section id="productos">      <div class="presale-ticker-banner">    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84b135" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14M5 22h14M19 2v6.5a6.5 6.5 0 0 1-3.66 5.8l-1.34.7a3 3 0 0 0 0 5.4l1.34.7a6.5 6.5 0 0 1 3.66 5.8V22M5 2v6.5a6.5 6.5 0 0 0 3.66 5.8l1.34.7a3 3 0 0 1 0 5.4l-1.34.7A6.5 6.5 0 0 0 5 21.5V22"/></svg>    <span>⏳ GRAN PREVENTA OFICIAL:</span> Despachamos tu orden el 15 de Agosto. ¡Asegura tu lote hoy con súper descuentos!  </div>
-  <p class="products-subtitle">Elige tu presentación</p>    <h2 class="products-main-title">Ahorra en la Preventa BioSetaz</h2>    <div class="products-grid">    <!-- PRESENTACIÓN 1: Pack Individual -->    <div class="product-card">            <!-- Banda diagonal en la esquina solicitada -->      <div class="corner-presale-ribbon">Preventa</div>
-      <h3>Pack Individual</h3>            <div class="units-sub">1 Unidad</div>            <p class="desc-text">Para iniciar tu rutina con la preventa BioSetaz</p>                        <div class="image-container">                <img src="tarro-melena.png" alt="BioSetaz Melena de León 1 unidad">              <div class="save-badge">Ahorra <span>20%</span></div>      </div>            <div class="weight-pill">100 g</div>                        <div class="price-box">        <div class="price-container-row">          <span class="old-price-strike">$89.900</span>          <span>$71.900</span>        </div>        <span>COP</span>      </div>                        <div class="shipping-info">                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>                Envío a todo Colombia            </div>            <button class="btn-grid-buy" onclick="openOrderModal('Preventa: Pack Individual (1 Unidad)')">                RESERVAR 1 UNIDAD                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>            </button>        </div>
-    <!-- PRESENTACIÓN 2: Pack Dúo -->    <div class="product-card featured-card">            <!-- Banda diagonal en la esquina solicitada -->      <div class="corner-presale-ribbon">Preventa</div>
-      <div class="top-badge">Más Recomendado</div>                  <h3>Pack Dúo</h3>            <div class="units-sub">2 Unidades</div>            <p class="desc-text">Mantén tu constancia con el mejor ahorro</p>                        <div class="image-container">                <img src="tarros2.png" alt="BioSetaz Melena de León Pack Dúo">                <div class="save-badge">Ahorra <span>25%</span></div>            </div>            <div class="weight-pill">200 g en total</div>                        <div class="price-box">        <div class="price-container-row">          <span class="old-price-strike">$161.800</span>          <span>$121.300</span>        </div>        <span>COP</span>      </div>                        <div class="shipping-info">                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>                Envío <strong>GRATIS</strong> a todo Colombia            </div>            <button class="btn-grid-buy" onclick="openOrderModal('Preventa: Pack Dúo (2 Unidades)')">                RESERVAR 2 UNIDADES                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>            </button>        </div>
-    <!-- PRESENTACIÓN 3: Pack Familiar -->    <div class="product-card">            <!-- Banda diagonal en la esquina solicitada -->      <div class="corner-presale-ribbon">Preventa</div>
-      <h3>Pack Familiar</h3>            <div class="units-sub">3 Unidades</div>            <p class="desc-text">Máximo valor por gramo en toda la preventa</p>                        <div class="image-container">                <img src="tarros3.png" alt="BioSetaz Melena de León Pack Familiar">                <div class="save-badge">Ahorra <span>30%</span></div>            </div>            <div class="weight-pill">300 g en total</div>                        <div class="price-box">        <div class="price-container-row">          <span class="old-price-strike">$229.500</span>          <span>$160.600</span>        </div>        <span>COP</span>      </div>                        <div class="shipping-info">                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>                Envío <strong>GRATIS</strong> a todo Colombia            </div>            <button class="btn-grid-buy" onclick="openOrderModal('Preventa: Pack Familiar (3 Unidades)')">                RESERVAR 3 UNIDADES                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>            </button>        </div>  </div></section>
+<div class="trace-container">
+  
+  <!-- SECCIÓN SUPERIOR: PRODUCTO + VERIFICACIÓN -->
+  <section class="top-verify-block">
+    <div class="product-hero-card">
+      <img src="tarro-melena.png" alt="BioSetaz Melena de León">
+      <div style="background: #09212a; color: white; font-size: 12px; font-weight: 700; padding: 6px 20px; border-radius: 20px; text-transform: uppercase;">
+        Contenido Neto: 100 gr
+      </div>
+    </div>
+    
+    <div class="info-side-pane">
+      <div class="auth-status-box">
+        <div class="status-badge-flex">
+          <div class="icon-check">✓</div>
+          <div>
+            <h2>Producto Auténtico</h2>
+            <p>Verificado exitosamente</p>
+          </div>
+        </div>
+        <div class="qr-container-box">
+          <img src="tarro-qr.png" alt="QR Verificado">
+          <p>Escanea para verificar la autenticidad</p>
+        </div>
+      </div>
+      
+      <div class="specs-panel-box">
+        <h3>Información del Producto</h3>
+        <div class="spec-row-item">
+          <div class="spec-icon-circle">🍄</div>
+          <div class="spec-data-text">
+            <p class="label-title">Producto</p>
+            <p class="value-desc">Melena de León</p>
+          </div>
+        </div>
+        <div class="spec-row-item">
+          <div class="spec-icon-circle">🌱</div>
+          <div class="spec-data-text">
+            <p class="label-title">Especie del hongo</p>
+            <p class="value-desc">Hericium erinaceus (Melena de León)</p>
+          </div>
+        </div>
+        <div class="spec-row-item">
+          <div class="spec-icon-circle">🔬</div>
+          <div class="spec-data-text">
+            <p class="label-title">Tipo de producto</p>
+            <p class="value-desc">Biomasa Micelial Deshidratada en Polvo</p>
+          </div>
+        </div>
+        <div class="spec-row-item">
+          <div class="spec-icon-circle">⚖️</div>
+          <div class="spec-data-text">
+            <p class="label-title">Peso neto</p>
+            <p class="value-desc">100 gr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- BANNER DE MÉTODOS DE PAGO EN EL MEDIO (SOLO IMÁGENES) -->
-<div class="payment-mid-banner">
-  <p>Métodos de pago aceptados</p>
-  <div class="payment-badges-row">
-    <div class="payment-badge">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/NEQUI.jpg" alt="Nequi">
+  <!-- SECCIÓN: TRAZABILIDAD DEL PRODUCTO -->
+  <section class="section-card-panel">
+    <div class="section-title-wrapper">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+      <h3>Trazabilidad del Producto</h3>
     </div>
-    <div class="payment-badge">
-      <img src="https://imagenes.portafolio.co/files/image_1200_600/uploads/2024/12/20/6765874dcc697.png" alt="Davivienda">
+    <div class="trace-data-grid">
+      <div class="trace-grid-cell">
+        <div class="trace-cell-icon">🆔</div>
+        <div class="trace-cell-text">
+          <p class="cell-lbl">Código único del producto</p>
+          <p class="cell-val">BSZ-HER-2026-000001</p>
+        </div>
+      </div>
+      <div class="trace-grid-cell">
+        <div class="trace-cell-icon">📦</div>
+        <div class="trace-cell-text">
+          <p class="cell-lbl">Número de lote</p>
+          <p class="cell-val">ML100-260701</p>
+        </div>
+      </div>
+      <div class="trace-grid-cell">
+        <div class="trace-cell-icon">📅</div>
+        <div class="trace-cell-text">
+          <p class="cell-lbl">Fecha de fabricación</p>
+          <p class="cell-val">01 Julio 2026</p>
+        </div>
+      </div>
+      <div class="trace-grid-cell">
+        <div class="trace-cell-icon">⌛</div>
+        <div class="trace-cell-text">
+          <p class="cell-lbl">Fecha de vencimiento</p>
+          <p class="cell-val">01 Julio 2028</p>
+        </div>
+      </div>
+      <div class="trace-grid-cell">
+        <div class="trace-cell-icon">📍</div>
+        <div class="trace-cell-text">
+          <p class="cell-lbl">Origen</p>
+          <p class="cell-val">Bogotá, Colombia</p>
+        </div>
+      </div>
+      <div class="trace-grid-cell">
+        <div class="trace-cell-icon">🛡️</div>
+        <div class="trace-cell-text">
+          <p class="cell-lbl">Estado del producto</p>
+          <span class="status-pill-ok">Auténtico BioSetaz</span>
+        </div>
+      </div>
     </div>
-    <div class="payment-badge">
-      <img src="https://kaiho.com.co/wp-content/uploads/2023/10/pse-logo.png" alt="PSE">
+  </section>
+
+  <!-- NUEVA SUB-SECCIÓN: BANNER DE LA ETIQUETA OFICIAL INTERACTIVA -->
+  <section class="section-card-panel">
+    <div class="section-title-wrapper">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      <h3>Etiqueta Técnica Comercial del Lote</h3>
     </div>
-    <div class="payment-badge">
-      <img src="https://img.icons8.com/color/96/delivery.png" alt="Contra Entrega">
+    <div class="label-banner-scrollbox">
+      <img src="etiquetaBiosetaz.png" alt="Etiqueta Oficial BioSetaz Melena de León">
     </div>
-  </div>
+  </section>
+
+  <!-- SECCIÓN TRIPLE: MATERIA PRIMA, PROCESO, ANÁLISIS -->
+  <section class="triple-dashboard-row">
+    <div class="dashboard-block-card">
+      <h4>🌾 Materia Prima</h4>
+      <p class="raw-material-desc">Arroz integral biotransformado por micelio de hongo funcional <em>Hericium erinaceus</em> de cultivo controlado de laboratorio.</p>
+      <img class="raw-material-illustration" src="hongo-ilustracion.png" alt="Materia Prima">
+    </div>
+    <div class="dashboard-block-card">
+      <h4>⚙️ Proceso de Producción</h4>
+      <div class="process-vertical-timeline">
+        <div class="timeline-step-node"><div class="node-line-indicator"><div class="node-dot">1</div><div class="node-line"></div></div><div class="node-content-text">Cultivo controlado de micelio</div></div>
+        <div class="timeline-step-node"><div class="node-line-indicator"><div class="node-dot">2</div><div class="node-line"></div></div><div class="node-content-text">Fermentación sólida</div></div>
+        <div class="timeline-step-node"><div class="node-line-indicator"><div class="node-dot">3</div><div class="node-line"></div></div><div class="node-content-text">Deshidratación</div></div>
+        <div class="timeline-step-node"><div class="node-line-indicator"><div class="node-dot">4</div><div class="node-line"></div></div><div class="node-content-text">Molienda fina</div></div>
+        <div class="timeline-step-node"><div class="node-line-indicator"><div class="node-dot">5</div><div class="node-line"></div></div><div class="node-content-text">Control microbiológico</div></div>
+        <div class="timeline-step-node"><div class="node-line-indicator"><div class="node-dot">6</div></div><div class="node-content-text">Empaque bajo condiciones técnicas</div></div>
+      </div>
+    </div>
+    <div class="dashboard-block-card">
+      <h4>🧪 Análisis Realizados</h4>
+      <ul class="analysis-check-list">
+        <li>Control microbiológico</li>
+        <li>Humedad</li>
+        <li>Metales pesados</li>
+        <li>Perfil nutricional</li>
+        <li>Beta-glucanos (si aplica)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: DOCUMENTACIÓN DISPONIBLE -->
+  <section class="section-card-panel">
+    <div class="section-title-wrapper">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <h3>Documentación Disponible</h3>
+    </div>
+    <div class="docs-download-grid">
+      <a href="#" class="doc-action-btn" target="_blank">
+        <span class="doc-btn-icon" style="font-size: 26px;">📋</span>
+        <p>Ver ficha técnica</p>
+      </a>
+      <a href="#" class="doc-action-btn" target="_blank">
+        <span class="doc-btn-icon" style="font-size: 26px;">📜</span>
+        <p>Ver certificado de análisis</p>
+      </a>
+      <a href="#" class="doc-action-btn" target="_blank">
+        <span class="doc-btn-icon" style="font-size: 26px;">📊</span>
+        <p>Ver información nutricional</p>
+      </a>
+      <a href="index.html#proceso-cultivo" class="doc-action-btn">
+        <span class="doc-btn-icon" style="font-size: 26px;">▶️</span>
+        <p>Conocer el proceso de producción</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN COMPACTA BENEFICIOS -->
+  <section class="section-card-panel" style="margin-bottom: 60px;">
+    <div class="section-title-wrapper">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <h3>Beneficios de la Melena de León</h3>
+    </div>
+    <div class="benefits-compact-row">
+      <div class="benefit-compact-card">
+        <span class="benefit-compact-icon" style="font-size: 24px;">🧠</span>
+        <h5>Memoria</h5>
+        <p>Apoya la memoria y el aprendizaje natural.</p>
+      </div>
+      <div class="benefit-compact-card">
+        <span class="benefit-compact-icon" style="font-size: 24px;">💡</span>
+        <h5>Claridad Mental</h5>
+        <p>Mejora la concentración y el enfoque diario.</p>
+      </div>
+      <div class="benefit-compact-card">
+        <span class="benefit-compact-icon" style="font-size: 24px;">🍃</span>
+        <h5>Ingredientes limpios</h5>
+        <p>Sin azúcar añadida, sin gluten y sin excipientes.</p>
+      </div>
+      <div class="benefit-compact-card">
+        <span class="benefit-compact-icon" style="font-size: 24px;">🔬</span>
+        <h5>Calidad BioSetaz</h5>
+        <p>Producción bajo protocolos técnicos y controlados.</p>
+      </div>
+    </div>
+  </section>
+
 </div>
 
-<!-- SECCIÓN: INFOGRAFÍA TÉCNICA BANNER --><div class="technical-info-banner" id="porque">  <div class="tech-column">    <div class="tech-icon">      <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">        <path d="M3 12a9 9 0 0 1 18 0H3z"/>        <path d="M9 12v6a3 3 0 0 0 6 0v-6"/>        <path d="M17 14.5c1.2-1.2 2-3 2-4.5s-2-2-3.5-2"/>      </svg>    </div>    <h3>Cultivo propio</h3>    <p>Controlamos cada etapa del cultivo para asegurar calidad y pureza.</p>  </div>  <div class="tech-column">    <div class="tech-icon">      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">        <path d="M6 3h12M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3M11 3v4"/>      </svg>    </div>    <h3>Fermentación sólida</h3>    <p>Método natural que permite el desarrollo óptimo del micelio y sus compuestos.</p>  </div>  <div class="tech-column">    <div class="tech-icon">      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">        <circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="12" r="2.5"/><circle cx="12" cy="19" r="2.5"/>        <line x1="12" y1="7.5" x2="12" y2="16.5"/><line x1="7.5" y1="12" x2="16.5" y2="12"/>      </svg>    </div>    <h3>Biomasa micelial</h3>    <p>Usamos 100% micelio, no cuerpo fructífero, más concentración.</p>  </div>  <div class="tech-column">    <div class="tech-icon">      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>        <path d="M9 11l2 2 4-4"/>      </svg>    </div>    <h3>Control de calidad</h3>    <p>Análisis en laboratorio para garantizar seguridad y trazabilidad por lote.</p>  </div>  <div class="tech-column">    <div class="tech-icon">      <svg width="42" height="42" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">        <path d="M35 15 C 45 12, 50 18, 55 15 C 62 12, 68 22, 65 30 C 62 35, 75 32, 80 40 C 85 48, 75 55, 72 65 C 70 72, 62 70, 58 78 C 52 88, 45 85, 42 75 C 40 68, 30 65, 32 55 C 34 48, 24 45, 22 35 C 20 25, 28 18, 35 15 Z"/>      </svg>    </div>    <h3>Hecho en Colombia</h3>    <p>Orgullosamente colombiano. Apoyamos la producción nacional.</p>  </div></div>
-<!-- SECCIÓN: NUESTRO PROCESO DE CULTIVO --><section id="proceso-cultivo">  <h2 class="process-title">Nuestro proceso de cultivo</h2>    <div class="process-steps-grid">    <div class="process-step-item">      <div class="step-img-wrapper">        <div class="step-number-badge">1</div>        <img src="proceso1.png" alt="Selección de cepa">      </div>      <h4>Selección de cepa</h4>    </div>    <div class="step-arrow-connector">→</div>    <div class="process-step-item">      <div class="step-img-wrapper">        <div class="step-number-badge">2</div>        <img src="proceso2.png" alt="Preparación del sustrato">      </div>      <h4>Preparación del sustrato</h4>    </div>    <div class="step-arrow-connector">→</div>    <div class="process-step-item">      <div class="step-img-wrapper">        <div class="step-number-badge">3</div>        <img src="proceso3.png" alt="Fermentación sólida controlada">      </div>      <h4>Fermentación sólida controlada</h4>    </div>    <div class="step-arrow-connector">→</div>    <div class="process-step-item">      <div class="step-img-wrapper">        <div class="step-number-badge">4</div>        <img src="proceso4.png" alt="Desarrollo micelial">      </div>      <h4>Desarrollo micelial</h4>    </div>    <div class="step-arrow-connector">→</div>    <div class="process-step-item">      <div class="step-img-wrapper">        <div class="step-number-badge">5</div>        <img src="proceso5.png" alt="Deshidratación a baja temperatura">      </div>      <h4>Deshidratación a baja temperatura</h4>    </div>    <div class="step-arrow-connector">→</div>    <div class="process-step-item">      <div class="step-img-wrapper">        <div class="step-number-badge">6</div>        <img src="proceso6.png" alt="Control de calidad y empaque">      </div>      <h4>Control de calidad y empaque</h4>    </div>  </div></section>
-<!-- SECCIÓN: GRIDS INFORMATIVOS DE VALOR --><section class="info-blocks-section">  <div class="info-blocks-grid">        <div class="info-card-box">      <div class="compact-text-side">        <h3>¿Qué contiene BioSetaz?</h3>        <p class="main-p-text">Melena de León (Hericium erinaceus) cultivada sobre arroz integral mediante fermentación sólida. Luego deshidratada y molida para conservar todos sus compuestos.</p>        <ul class="info-check-list">          <li>Sin gluten</li>          <li>Sin azúcar añadida</li>          <li>Sin excipientes</li>          <li>Sin colorantes</li>          <li>Sin conservantes</li>          <li>Apto para veganos</li>        </ul>      </div>      <img class="card-bottom-illustration" src="hongo-ilustracion.png" alt="Hericium erinaceus">    </div>    <div class="info-card-box">      <div class="compact-text-side">        <h3>Trazabilidad Garantizada</h3>        <p class="main-p-text">Cada producto BioSetaz tiene un código QR que te permite conocer toda la información de tu lote.</p>        <ul class="info-check-list">          <li>Origen y fecha de producción</li>          <li>Número de lote</li>          <li>Certificados de análisis</li>          <li>Información del proceso</li>        </ul>      </div>      <img class="card-center-illustration" src="tarro-qr.png" alt="Trazabilidad QR BioSetaz">      <p class="small-footer-note compact-text-side">Escanea el QR y conoce el origen de tu producto.</p>    </div>    <div class="info-card-box dark-consumption-box">      <h3>¿Cómo se consume?</h3>            <div class="consumption-row">        <div class="consumption-icon-wrapper">          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">            <path d="M5 9c0 4.4 2.5 7 7 7s7-2.6 7-7H5zM6 16h12"/>            <path d="M19 10a2.5 2.5 0 0 1 0 5"/>            <line x1="9" y1="3" x2="10" y2="6"/>            <line x1="12" y1="2" x2="12" y2="5"/>            <line x1="15" y1="3" x2="14" y2="6"/>          </svg>        </div>        <p>Mezcla 5 g (1 cucharadita) en tu bebida o alimento favorito.</p>      </div>      <div class="consumption-row">        <div class="consumption-icon-wrapper">          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">            <path d="M6 9v7a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9H6z"/>            <path d="M18 11a2 2 0 0 1 0 4"/>            <path d="M9 2c.5 1-.5 2 0 3M12 2c.5 1-.5 2 0 3M15 2c.5 1-.5 2 0 3"/>          </svg>        </div>        <p>Puedes consumirlo caliente o frío.</p>      </div>      <div class="consumption-row">        <div class="consumption-icon-wrapper">          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">            <circle cx="12" cy="13" r="7"/>            <line x1="7" y1="21" x2="5" y2="19"/>            <line x1="17" y1="21" x2="19" y2="19"/>            <path d="M5 5a3 3 0 0 1 4 1M19 5a3 3 0 0 0-4 1"/>            <path d="M10 13l1.5 1.5 3-3"/>          </svg>        </div>        <p>Ideal para uso diario.</p>      </div>      <div class="consumption-row">        <div class="consumption-icon-wrapper">          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">            <line x1="12" y1="2" x2="12" y2="14"/>            <circle cx="12" cy="17" r="4"/>            <path d="M12 13a4 4 0 0 1 0 8"/>          </svg>        </div>        <p>5 g al día es la dosis recomendada.</p>      </div>    </div>  </div></section>
-
-<!-- SECCIÓN PRO: EXPANSIÓN DE DISTRIBUIDORES CON CAPTURA DE DATOS DIRECTA -->
-<section id="distribuidores">
-  <p class="dist-subtitle">Canal Corporativo Oficial</p>
-  <h2 class="dist-title">Programa Nacional de Distribuidores Autorizados</h2>
-  
-  <div class="dist-container-layout">
-    <!-- Beneficios Corporativos -->
-    <div class="dist-info-side">
-      <div class="dist-benefit-item">
-        <div class="dist-benefit-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
-        </div>
-        <div class="dist-benefit-text">
-          <h4>Volumen y Escala Comercial</h4>
-          <p>Ofrecemos lotes mayoristas cerrados a partir de 200 unidades mínimas por pedido. Abastecimiento directo con el productor, garantizando stock constante y frescura de lote.</p>
-        </div>
-      </div>
-      <div class="dist-benefit-item">
-        <div class="dist-benefit-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
-        </div>
-        <div class="dist-benefit-text">
-          <h4>Trazabilidad e Inocuidad</h4>
-          <p>Cada tarro BioSetaz cuenta con código QR único de laboratorio. Respaldo legal completo y control microbiológico para máxima confianza en anaquel.</p>
-        </div>
-      </div>
-      <div class="dist-benefit-item">
-        <div class="dist-benefit-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-        </div>
-        <div class="dist-benefit-text">
-          <h4>Soporte Integral de Marca</h4>
-          <p>Inclusión en el ecositema publicitario de BioSetaz, acceso a recursos multimedia oficiales, contenido educativo para redes y apoyo comercial prioritario.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Formulario de Captura Directa -->
-    <div class="dist-form-side">
-      <h3>Solicitar Catálogo Mayorista</h3>
-      <p class="form-desc">Déjanos tus datos para agendar una sesión comercial y enviarte las condiciones de distribución.</p>
-      
-      <form onsubmit="sendDistributorToWhatsApp(event)">
-        <div class="dist-form-group">
-          <input type="text" id="distStore" placeholder="Ej. Tienda Fit Colombia / Independiente" required>
-        </div>
-        <div class="dist-form-group">
-          <input type="text" id="distName" placeholder="Ej. Carlos Mendoza" required>
-        </div>
-        <div class="dist-form-group">
-          <input type="text" id="distCity" placeholder="Ej. Medellín, Antioquia" required>
-        </div>
-        <div class="dist-form-group">
-          <input type="email" id="distEmail" placeholder="Ej. contacto@tuempresa.com" required>
-        </div>
-        <div class="dist-form-group">
-          <input type="tel" id="distPhone" placeholder="Ej. 3223959868" pattern="3[0-9]{9}" maxlength="10" title="Debe ser un número celular válido en Colombia (10 dígitos comenzando por 3)" required>
-        </div>
-        <button type="submit" class="btn-submit-dist">
-          💼 APLICAR COMO DISTRIBUIDOR
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- SECCIÓN: PREGUNTAS FRECUENTES --><section id="faq-section">  <h2 class="faq-main-title">Preguntas Frecuentes</h2>    <div class="faq-grid-3cols">        <!-- COLUMNA 1 -->    <div class="faq-column-stack">            <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Qué es la Melena de León?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Es un hongo funcional científico llamado Hericium erinaceus. Es reconocido mundialmente por sus potentes propiedades para estimular el sistema nervioso central, potenciar la memoria, la concentración y proteger la salud digestiva gracias a sus compuestos activos únicos (hericenonas y erinacinas).</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Cómo se consume BioSetaz?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>La dosis recomendada es de 5 gramos al día (aproximadamente una cucharadita cafetera). Puedes mezclarlo directamente en tus bebidas cotidianas como café, agua, jugos, batidos, o espolvorearlo sobre tus comidas. Es apto tanto para preparaciones calientes como frías.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Cuánto producto trae cada tarro?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Cada presentación viene en un tarro de 100 gramos netos de polvo puro de biomasa micelial deshidratada, rindiendo exactamente para 20 porciones completas de uso diario bajo la dosis recomendada.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Qué es la biomasa micelial?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Es la red de filamentos del hongo (el micelio) cultivado de forma controlada junto con el sustrato orgánico que coloniza. A diferencia del hongo maduro entero, el micelio concentra una inmensa cantidad de polisacáridos y beta-glucanos esenciales para los beneficios neurológicos e inmunológicos.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Por qué cultivan sobre arroz integral?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>El arroz integral actúa como el vehículo alimenticio ideal. Durante nuestro proceso de fermentación sólida, el micelio consume el arroz y lo transforma por completo, convirtiendo el almidón en compuestos biológicamente activos y de facilísima absorción para el cuerpo humano.</p>        </div>      </div>    </div>    <!-- COLUMNA 2 -->    <div class="faq-column-stack">            <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Este producto tiene registro INVIMA?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Sí, todos nuestros procesos cumplen estrictamente con la normativa legal de Colombia. Al ser productores directos nacionales, garantizamos que cada lote cuenta con sus debidos controles de inocuidad y registros sanitarios vigentes.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Dónde se produce BioSetaz?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Somos orgullosamente una empresa colombiana. Todo nuestro hongo se cultiva, fermenta, deshidrata y empaca en laboratorios controlados en Colombia, permitiéndonos ofrecer la máxima frescura posible del mercado sin depender de importaciones viejas.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Tiene azúcar o aditivos añadidos?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Absolutamente no. BioSetaz es 100% natural y puro. No añadimos endulzantes, maltodextrinas, excipientes de relleno, colorantes ni conservantes artificiales. Es un producto limpio, apto para diabéticos y dietas estrictas.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Es seguro comprar en esta tienda virtual?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Totalmente seguro. Hacemos parte activa de "Tu Negocio en Línea", un programa del Ministerio TIC del Gobierno de Colombia operado por la plataforma certificada Cercia. Toda nuestra pasarela de pagos cuenta con encriptación bancaria segura para PSE y tarjetas de crédito.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Es apto para veganos y vegetarianos?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Sí, es un producto de origen 100% vegetal y fúngico. No entra en contacto con ningún ingrediente de origen animal en ninguna etapa de la cadena de cultivo o envasado, lo que lo hace perfecto para consumidores veganos.</p>        </div>      </div>    </div>    <!-- COLUMNA 3 -->    <div class="faq-column-stack">            <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Hacen envíos a todo el país?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Sí, despachamos a nivel nacional cubriendo ciudades principales (Bogotá, Medellín, Cali, Barranquilla, Bucaramanga) y municipios alejados a través de las principales transportadoras del país. Recuerda que el Pack Dúo y el Familiar cuentan con envío totalmente GRATIS.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Tiene algún efecto secundario?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>La Melena de León es considerada un alimento seguro y un adaptógeno natural muy bien tolerado. No produce efectos secundarios adversos ni genera adicción o dependencia. En personas con estómagos ultra sensibles, se aconseja iniciar con media dosis la primera semana.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Cuánto tiempo tarda en llegar mi pedido?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Para Bogotá y alrededores, las entregas se realizan normalmente entre 24 y 48 horas hábiles tras la confirmación de tus datos en WhatsApp o la compra directa. Para el resto de ciudades colombianas, el tiempo estimado de entrega es de 2 a 4 días hábiles.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿Puedo consumirlo si tomo medicamentos?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>Aunque es un producto natural seguro, si estás bajo tratamientos médicos específicos de control crónico (como anticoagulantes o inmunosupresores), te recomendamos consultar previamente con tu médico de confianza antes de iniciar su consumo diario.</p>        </div>      </div>      <div class="faq-accordion-item">        <button class="faq-header-btn" onclick="toggleFaq(this)">          <h4>¿A qué hora del día es mejor tomarlo?</h4>          <span class="faq-icon-status">+</span>        </button>        <div class="faq-body-content">          <p>La mayoría de nuestros clientes prefieren consumirlo por las mañanas junto con su café o desayuno, ya que potencia la claridad mental y el enfoque para toda la jornada laboral o de estudio. No interfiere con el sueño, por lo que también puedes tomarlo por la tarde.</p>        </div>      </div>    </div>  </div></section>
-<!-- VENTANA POPUP DE COMPRA INTEGRADO CON REDIRECCIÓN DIRECTA A CERCIA --><div class="order-modal" id="orderModal">  <div class="order-modal-content">    <button class="order-modal-close" onclick="closeOrderModal()">&times;</button>        <h3>Completa tu pedido</h3>    <p style="color:#5a6e75; font-size:14px; margin-bottom:15px;">Estás a un paso de adquirir:</p>    <div class="selected-product-label" id="modalProductTitle">Pack Seleccionado</div>        <form id="whatsappOrderForm" onsubmit="sendOrderToWhatsApp(event)">      <div class="form-group">        <label for="clientName">Nombre Completo</label>        <input type="text" id="clientName" placeholder="Ej. Juan Pérez" required>      </div>            <div class="form-group">        <label for="clientCity">Ciudad / Departamento</label>        <input type="text" id="clientCity" placeholder="Ej. Bogotá, Cundinamarca" required>      </div>            <div class="form-group">        <label for="clientAddress">Dirección de Entrega</label>        <input type="text" id="clientAddress" placeholder="Ej. Calle 10 # 4 - 25 Apto 302" required>      </div>            <div class="form-group">        <label for="clientEmail">Correo Electrónico</label>        <input type="email" id="clientEmail" placeholder="Ej. juan.perez@gmail.com" required>      </div>            <div class="modal-actions-wrapper">                <a id="directCheckoutBtn" href="https://biosetazlabs.cercia.co/" target="_blank" class="btn-direct-checkout">          💳 PAGO EN LÍNEA DIRECTO (PSE / Tarjeta)        </a>        <button type="submit" class="btn-submit-order">          💬 Confirmar pedido por WhatsApp        </button>      </div>    </form>  </div></div>
-
-<!-- MENÚ FLOTANTE INTEGRADO MULTI-REDES SOCIALES CON EL NUEVO LOGO DEL LEÓN BRILLANTE -->
+<!-- MENÚ FLOTANTE MULTI-REDES SOCIALES -->
 <div class="mushroom-social-menu">    
   <div class="mushroom-trigger" title="Contacto y Redes Sociales">    
     <img src="boton.png" alt="León BioSetaz">
@@ -255,41 +499,68 @@
     <svg viewBox="0 0 24 24"><path d="M12.525.02c1.31.01 2.61-.01 3.91.02.08 1.53.63 3.05 1.69 4.18 1.12.99 2.61 1.48 4.11 1.41v3.91c-1.42-.04-2.83-.53-3.95-1.46-.57-.48-1.05-1.08-1.41-1.74v7.9c.04 2.29-.93 4.57-2.67 6.04-1.92 1.53-4.57 1.96-6.88 1.15-2.22-.74-4.04-2.58-4.66-4.79-.75-2.55-.05-5.46 1.81-7.38 1.61-1.61 4.02-2.34 6.26-1.87v4.08c-1.31-.41-2.77-.07-3.73.87-.93.98-1.12 2.53-.45 3.69.61 1.09 1.89 1.74 3.14 1.57 1.24-.09 2.31-1.11 2.39-2.36V0h.01z"/></svg>  
   </a>  
   <a href="https://www.instagram.com/dr.biosetaz?igsh=MWs5d2JoOTAwbmc0bw%3D%3D&utm_source=qr" class="sub-social-btn ig-btn" target="_blank" title="Síguenos en Instagram">    
-    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-.485.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.79.073 7.151.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>  
+    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85 Santo .07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-.485.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.79.073 7.151.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>  
   </a>  
   <a href="https://wa.me/573223959868" class="sub-social-btn wa-btn" target="_blank" title="Escríbenos por WhatsApp">    
     <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.064 11.966.064c3.184.001 6.177 1.242 8.426 3.496 2.248 2.25 3.484 5.245 3.483 8.43-.004 6.616-5.34 11.9-11.907 11.9-2.001-.001-3.96-.502-5.711-1.454L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.372 1.45 5.535 0 10.04-4.494 10.042-10.029.002-2.684-1.04-5.206-2.934-7.105-1.893-1.899-4.41-2.945-7.102-2.946-5.533 0-10.04 4.496-10.042 10.03-.001 1.93.504 3.813 1.465 5.417l-.999 3.646 3.734-.973zm11.365-4.42c-.29-.146-1.72-.849-1.986-.947-.266-.098-.46-.146-.653.146-.193.291-.747.947-.916 1.117-.168.171-.337.191-.627.045-.29-.146-1.223-.45-2.33-1.433-.861-.767-1.443-1.716-1.611-2.007-.168-.29-.018-.447.127-.591.13-.13.29-.34.436-.509.145-.17.193-.291.29-.485.097-.194.049-.364-.025-.509-.072-.146-.653-1.577-.894-2.133-.235-.566-.475-.489-.653-.493-.17-.004-.364-.004-.559-.004-.193 0-.508.073-.774.364-.266.292-1.014.992-1.014 2.422 0 1.431 1.039 2.816 1.183 3.01.145.194 2.045 3.123 4.954 4.381.692.299 1.233.478 1.656.613.696.22 1.33.19 1.83.115.558-.083 1.72-.704 1.961-1.383.242-.678.242-1.261.17-1.382-.073-.122-.267-.193-.558-.339z"/></svg>  
   </a>
 </div>
 
-<!-- REDISEÑO CORPORATIVO DEL FOOTER CON LOGOS SOLOS --><footer class="premium-footer">  <div class="footer-container">        <!-- Bloque 1: Identidad Corporativa -->    <div class="footer-brand-block">      <h2>BIOSETAZ</h2>      <p>Somos <span class="specialty-label">PRODUCTORES DE HONGOS FUNCIONALES</span> en Colombia. Nos enfocamos en el cultivo propio y controlado de biomasa micelial de Melena de León pura de alta calidad.</p>            <!-- Sello de Confianza Institucional Integrado en el diseño -->      <div class="mintic-badge-card">        🇨🇴 Tienda oficial impulsada por el programa <span>Tu Negocio en Línea</span> del Ministerio TIC y el ecosistema <span>Cercia</span>.      </div>    </div>    <!-- Bloque 2: Navegación Rápida -->    <div class="footer-links-column">      <h3>Navegación</h3>      <ul>        <li><a href="#inicio">Inicio</a></li>        <li><a href="#productos">Tienda Oficial</a></li>        <li><a href="#proceso-cultivo">Nuestro Proceso</a></li>        <li><a href="#distribuidores">Distribuidores</a></li>        <li><a href="#faq-section">Preguntas Frecuentes</a></li>      </ul>    </div>    <!-- Bloque 3: Canales de Atención y Redes Oficiales -->    <div class="footer-links-column">      <h3>Canales Oficiales</h3>      <ul>        <li><a href="https://www.instagram.com/dr.biosetaz?igsh=MWs5d2JoOTAwbmc0bw%3D%3D&utm_source=qr" target="_blank">Instagram (@dr.biosetaz)</a></li>        <li><a href="https://www.tiktok.com/@dr.biosetaz?_r=1&_t=ZS-97zOJcPskIK" target="_blank">TikTok (@dr.biosetaz)</a></li>        <li><a href="https://wa.me/573223959868" target="_blank">Soporte WhatsApp</a></li>      </ul>    </div>  </div>    <!-- FRANJA DE PAGOS EN EL FOOTER (SOLO IMÁGENES) -->  <div class="footer-payment-row">    <span>Pagos Seguros y Opciones de Despacho</span>    <div class="footer-payment-badges">      <div class="footer-payment-badge">        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/NEQUI.jpg" alt="Nequi">      </div>      <div class="footer-payment-badge">        <img src="https://imagenes.portafolio.co/files/image_1200_600/uploads/2024/12/20/6765874dcc697.png" alt="Davivienda">      </div>      <div class="footer-payment-badge">        <img src="https://kaiho.com.co/wp-content/uploads/2023/10/pse-logo.png" alt="PSE">      </div>      <div class="footer-payment-badge">        <img src="https://img.icons8.com/color/96/delivery.png" alt="Contra Entrega">      </div>    </div>  </div>  <!-- Franja Inferior Separada de Copyright -->  <div class="footer-bottom-bar">    <p>&copy; 2026 <strong>BIOSETAZ</strong>. Todos los derechos reservados.</p>    <p>Hecho en Colombia con Orgullo 🇨🇴</p>  </div></footer>
-<!-- LÓGICA DE JAVASCRIPT --><script>
-  // LÓGICA EXCLUSIVA DEL MENÚ HAMBURGUESA
+<!-- FOOTER CORPORATIVO UNIFICADO -->
+<footer class="premium-footer">  
+  <div class="footer-container">        
+    <div class="footer-brand-block">      
+      <h2>BIOSETAZ</h2>      
+      <p>Somos <span class="specialty-label">PRODUCTORES DE HONGOS FUNCIONALES</span> en Colombia. Nos enfocamos en el cultivo propio y controlado de biomasa micelial de Melena de León pura de alta calidad.</p>            
+      <div class="mintic-badge-card">        
+        🇨🇴 Tienda oficial impulsada por el programa <span>Tu Negocio en Línea</span> del Ministerio TIC y el ecosistema <span>Cercia</span>.      
+      </div>    
+    </div>    
+    <div class="footer-links-column">      
+      <h3>Navegación</h3>      
+      <ul>        
+        <li><a href="index.html#inicio">Inicio</a></li>        
+        <li><a href="index.html#productos">Tienda Oficial</a></li>        
+        <li><a href="index.html#proceso-cultivo">Nuestro Proceso</a></li>        
+        <li><a href="index.html#distribuidores">Distribuidores</a></li>        
+        <li><a href="index.html#faq-section">Preguntas Frecuentes</a></li>      
+      </ul>    
+    </div>    
+    <div class="footer-links-column">      
+      <h3>Canales Oficiales</h3>      
+      <ul>        
+        <li><a href="https://www.instagram.com/dr.biosetaz" target="_blank">Instagram (@dr.biosetaz)</a></li>        
+        <li><a href="https://www.tiktok.com/@dr.biosetaz" target="_blank">TikTok (@dr.biosetaz)</a></li>        
+        <li><a href="https://wa.me/573223959868" target="_blank">Soporte WhatsApp</a></li>      
+      </ul>    
+    </div>  
+  </div>    
+  
+  <div class="footer-payment-row">    
+    <span>Pagos Seguros y Opciones de Despacho</span>    
+    <div class="footer-payment-badges">      
+      <div class="footer-payment-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/NEQUI.jpg" alt="Nequi"></div>      
+      <div class="footer-payment-badge"><img src="https://imagenes.portafolio.co/files/image_1200_600/uploads/2024/12/20/6765874dcc697.png" alt="Davivienda"></div>      
+      <div class="footer-payment-badge"><img src="https://kaiho.com.co/wp-content/uploads/2023/10/pse-logo.png" alt="PSE"></div>      
+      <div class="footer-payment-badge"><img src="https://img.icons8.com/color/96/delivery.png" alt="Contra Entrega"></div>    
+    </div>  
+  </div>  
+  
+  <div class="footer-bottom-bar">    
+    <p>&copy; 2026 <strong>BIOSETAZ</strong>. Todos los derechos reservados.</p>    
+    <p>Hecho en Colombia con Orgullo 🇨🇴</p>  
+  </div>
+</footer>
+
+<script>
+  // LÓGICA DEL MENÚ HAMBURGUESA MÓVIL
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navMenu = document.getElementById('navMenu');
-
   hamburgerBtn.addEventListener('click', () => {
     hamburgerBtn.classList.toggle('active');
     navMenu.classList.toggle('active');
   });
+</script>
 
-  // Cerrar menú automáticamente cuando se da clic en una sección
-  document.querySelectorAll('#navMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburgerBtn.classList.remove('active');
-      navMenu.classList.remove('active');
-    });
-  });
-
-  const modal = document.getElementById('videoModal');
-  const openBtn = document.getElementById('openVideoBtn');
-  const closeBtn = document.getElementById('closeVideoBtn');
-  const iframe = document.getElementById('videoPlayer');
-  openBtn.addEventListener('click', () => {    modal.classList.add('active');  });  closeBtn.addEventListener('click', () => {    modal.classList.remove('active');  });  modal.addEventListener('click', (e) => { if (e.target === modal) closeBtn.click(); });
-
-  const orderModal = document.getElementById('orderModal');
-  const modalProductTitle = document.getElementById('modalProductTitle');  let currentSelectedProduct = "";  function openOrderModal(productName) {    currentSelectedProduct = productName;    modalProductTitle.innerText = productName;    orderModal.classList.add('active');  }  function closeOrderModal() {    orderModal.classList.remove('active');    document.getElementById('whatsappOrderForm').reset();  }  function sendOrderToWhatsApp(event) {    event.preventDefault();     let name = document.getElementById('clientName').value.trim();    name = name.charAt(0).toUpperCase() + name.slice(1);        const city = document.getElementById('clientCity').value.trim();    const address = document.getElementById('clientAddress').value.trim();    const email = document.getElementById('clientEmail').value.trim();
-
-    const phoneNumber = "573223959868";    const baseText = `SOLICITUD DE PEDIDO - BIOSETAZ\n\n` +                     `* Presentación: ${currentSelectedProduct}\n` +                     `* Nombre: ${name}\n` +                     `* Ciudad: ${city}\n` +                     `* Dirección: ${address}\n` +                     `* Email: ${email}\n\n` +                     `Agradezco me confirmen los datos y medios de pago para proceder con el despacho.`;    const encodedText = encodeURIComponent(baseText);    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;    window.open(whatsappUrl, '_blank');    closeOrderModal();  }  function sendDistributorToWhatsApp(event) {    event.preventDefault();    const store = document.getElementById('distStore').value.trim();    let contactName = document.getElementById('distName').value.trim();    contactName = contactName.charAt(0).toUpperCase() + contactName.slice(1);    const city = document.getElementById('distCity').value.trim();    const email = document.getElementById('distEmail').value.trim();    const phone = document.getElementById('distPhone').value.trim();
-
-    const phoneNumber = "573223959868";    const baseText = `NUEVA SOLICITUD DE DISTRIBUIDOR - BIOSETAZ\n\n` +                     `* Empresa/Tienda: ${store}\n` +                     `* Contacto: ${contactName}\n` +                     `* Ciudad: ${city}\n` +                     `* Email: ${email}\n` +                     `* Celular: ${phone}\n\n` +                     `Estoy interesado en conocer los términos comerciales para el lote mínimo corporativo de 200 unidades.`;    const encodedText = encodeURIComponent(baseText);    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;    window.open(whatsappUrl, '_blank');    event.target.reset();  }  function toggleFaq(buttonElement) {    const accordionItem = buttonElement.parentElement;    const iconStatus = buttonElement.querySelector('.faq-icon-status');    const isOpen = accordionItem.classList.contains('active');        document.querySelectorAll('.faq-accordion-item').forEach(item => {      item.classList.remove('active');      const icon = item.querySelector('.faq-icon-status');      if(icon) icon.innerText = "+";    });        if (!isOpen) {      accordionItem.classList.add('active');      iconStatus.innerText = "−";    }  }</script></body></html>
+</body>
+</html>
